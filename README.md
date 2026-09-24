@@ -78,7 +78,6 @@ anchor test
 
 ## V1 scope decisions
 
-- No global `job_id` registry — uniqueness is per-client, kept off-chain if a platform layer needs it.
 - No dispute/rejection instruction — if a client is unhappy with a completed submission and doesn't act within `review_window + grace_period`, the freelancer can claim. This is a "silence = approval" design; disputes are treated as a V2 concern.
 - No freelancer-reassignment instruction — if the original freelancer never delivers, the client's recovery path is `cancel_and_refund` followed by initializing a new escrow.
 
